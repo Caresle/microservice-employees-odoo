@@ -10,13 +10,13 @@ const pool = new Pool({
 	port: parseInt(process.env.PGPORT ?? "0"),
 });
 
-export const postgrsql = async (query: string, params: Array<any> = []) => {
+export const postgresql = async (query: string, params: Array<any> = []) => {
 	try {
 		const res = await pool.query(query, params);
 		return res.rows;
 	} catch (error) {
 		console.log(error);
 	} finally {
-		await pool.end();
+		// await pool.end();
 	}
 };
