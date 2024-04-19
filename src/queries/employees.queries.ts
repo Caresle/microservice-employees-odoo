@@ -33,12 +33,3 @@ export const getEmployeesQuery = `
 		END
 	;
 `;
-
-// AND
-// 		CASE
-// 				WHEN $2 IS NOT NULL THEN he.name ILIKE '%' || $2 || '%'
-// 				WHEN $3 IS NOT NULL THEN he.work_email ILIKE '%' || $3 || '%'
-// 				WHEN $4 IS NOT NULL THEN rc.name ILIKE '%' || $4 || '%'
-// 				WHEN $1 IS NOT NULL THEN he.id = $1
-// 				ELSE TRUE
-// 		END
