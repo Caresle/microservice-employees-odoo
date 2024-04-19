@@ -2,9 +2,11 @@
 	"name": "microservice-employees-odoo-1",
 	"version": "1.0.0",
 	"description": "",
-	"main": "src/app.js",
+	"main": "build/app.js",
 	"scripts": {
-		"dev": "nodemon src/app.ts"
+		"start": "node build/app.js",
+		"dev": "nodemon src/app.ts",
+		"build": "tsc"
 	},
 	"keywords": [],
 	"author": "",
