@@ -1,17 +1,17 @@
 FROM node:20-alpine3.19
 
+RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
-COPY package*.json ./
+COPY package.json /usr/src/app/
 
 RUN npm install
 
-COPY . .
+COPY . /usr/src/app/
 
 COPY .env .env
 
-EXPOSE 3000
-
-RUN npm run build
+RUN npm i -g typescript
+RUN npm --prefix /usr/src/app run build
 
 CMD [ "npm run start" ]
